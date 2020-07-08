@@ -8,5 +8,8 @@ All uuids which are set up for internal statistics of Loxone software are extrac
 ## Configuration
 Same config file format is used for input and output. Credentials of Loxone Miniserver are used to fetch json file. 
 
+Sample configuration: https://github.com/ww00001/loxone-influx/blob/master/config/default.json
+
+
 ## Future
 Plan is to have a docker container which can be run periodically. 
