@@ -4,9 +4,10 @@ def clean_names(uncleared):
     return uncleared.replace(" ","_")
 
 #debug variables
-printrooms = False
-printcats = False
-printall = False
+printrooms = 0
+printcats = 0
+printall = 0
+printmeasurments = 1
 ###############################################
 
 
@@ -97,6 +98,8 @@ for item in lox['controls']:
                 uuid = lox['controls'][item]['states'][state]
                 dataset = {uuid:{"measurement":namestring + "-" + state , "tags": {"room":roomstring }, "intervalSec":0}}
                 dataexport['uuids'].update(dataset)
+                if printmeasurments:
+                    print(namestring,state,roomstring)
             else:
                 if printall:
                     print(state)
